@@ -21,7 +21,7 @@ typedef struct {
 	
 	uint64_t width;
 	uint64_t height;
-	uint64_t bpp; // 32 bit or 24 bit
+	uint64_t bpp; // 24 or 32 bits
 } ipx_header_t;
 
 #pragma pack(push, 1)

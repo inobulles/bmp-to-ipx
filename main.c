@@ -94,7 +94,7 @@ int main(int argc, char* argv[]) {
 	uint32_t components = info_header.bpp >> 3;
 	uint32_t pitch = info_header.width * components;
 	
-	for (uint32_t i = 0; i < info_header.height; i++) { // swizzle and flip vertically
+	for (uint32_t i = 0; i < info_header.height; i++) { // swizzle components and flip vertically
 		uint8_t* dest = final_data + i * pitch;
 		uint8_t* src = data8 + (info_header.height - i - 1) * pitch;
 		

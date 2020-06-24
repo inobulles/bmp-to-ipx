@@ -99,10 +99,10 @@ int main(int argc, char* argv[]) {
 		uint8_t* src = data8 + (info_header.height - i - 1) * pitch;
 		
 		if (components == 4) for (uint32_t j = 0; j < pitch; j += components) {
-			dest[j + 0] = src[j + 3];
-			dest[j + 1] = src[j + 2];
-			dest[j + 2] = src[j + 1];
-			dest[j + 3] = src[j + 0];
+			dest[j + 0] = src[j + 2];
+			dest[j + 1] = src[j + 1];
+			dest[j + 2] = src[j + 0];
+			dest[j + 3] = src[j + 3];
 			
 		} else if (components == 3) for (uint32_t j = 0; j < pitch; j += components) {
 			dest[j + 0] = src[j + 2];
